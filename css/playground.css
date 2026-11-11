@@ -22,7 +22,6 @@
     
     border: 1px solid black;
     border-radius: 10px;
-
 }
 
 .section-grid-half{
@@ -208,7 +207,6 @@
 
     justify-content: center;
     align-content: center;
-
 }
 
 .container-buttons{
@@ -227,9 +225,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
-    
-    
 }
 
 .buttons{
