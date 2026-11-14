@@ -1,0 +1,36 @@
+.trailer-container{
+
+    grid-area: 2 / 2 / 3 / 7;
+
+    height: 90%;
+    width: 90%;
+    /* background-color: blueviolet; */
+
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.trailer-inner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    aspect-ratio: 16 / 9;
+
+}
+.trailer-inner > video{
+    
+    justify-self: center;
+    align-self: center;
+    width: 101%;
+    height: auto;
+}

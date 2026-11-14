@@ -1,0 +1,269 @@
+:root{
+    :root{
+    --color1: #B97a2a;
+    --purple: #242124;
+    --grey1: #1C1C1C;
+    --grey2: #323232;
+    --black: #000000;
+    --white: #FFFFFF;
+    --accent-red: #2b0000;
+    --transparent: rgb(0,0,0,0.1);
+    /* translate */
+    /* l
+    r
+    u
+    s */
+    --tr-left: 100%;
+    --tr-right: 100%;
+    --tr-up: 100%;
+    --tr-down: 100%;
+
+}
+
+}
+
+.grid-gameplay{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(10,10%);
+    grid-template-columns: repeat(10, 10%);
+
+    grid-template-areas: 
+    "Page-text Page-text Page-text . . . . . . ."
+    ". . . . . . . . . ."
+    ". . Main-text Main-text Main-text Main-text Main-text Main-text Main-text ."
+    ". . Main-text Main-text Main-text Main-text Main-text Main-text Main-text ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". . . . . . . . . ."; 
+}
+
+.page-name-grid{
+    grid-area: 1 / 1 / 2 / 4;
+    display: grid;
+    grid-template-rows: 1fr 2px;
+    height: 80%;
+}
+.page-text{
+    position: relative;
+    z-index: 4;
+    align-self: flex-end;
+    height: 80%;
+    transform: translateX(1vw);
+    align-content: end;
+    background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%);
+}
+
+.page-text > p{
+    font-family: "Times New Roman", Times, serif;
+    color: var(--color1);
+    
+    font-size: 2vw;
+    transform: translateY(0.5vh);
+    text-shadow: 0px 1px 0px #000000,0px 2px 5px #000000,0px 3px 5px #000000;
+    
+}
+
+.line{
+    transform: translateX(1vw);
+    background-image: linear-gradient(90deg,var(--color1) 50%, rgba(255, 0, 0, 0) 100%);
+}
+
+
+.Main-topic{
+    position: relative;
+    z-index: 2;
+    grid-area: 3 / 2 / 5 / 10;
+    margin-left: 10%;
+}
+
+.Main-topic > p{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+               0 0 20px rgb(0, 0, 0),
+               0 0 20px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3vw;
+  font-weight: 900;
+}
+
+.gameplay-video-container{
+
+    transform: translateX(-1%);
+    grid-area: 5 / 3 / 10 / 10;
+    
+    
+}
+
+.video-inner{
+    border: 2px solid var(--color1);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    justify-self: center;
+
+
+    height: 100%;
+    
+    aspect-ratio: 907 / 423;
+}
+
+video {
+        width: calc(101% - 0px);
+        height: auto;
+}
+
+.Motif { grid-area: 1 / 1 / 10 / 6; }
+
+
+.grid-gameplay-2{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(10,10%);
+    grid-template-columns: repeat(10, 10%);
+
+    grid-template-areas: 
+    "Page-text Page-text Page-text . . . . . . ."
+    ". . . . . . . . . ."
+    ". . Main-text Main-text Main-text Main-text Main-text Main-text Main-text ."
+    ". . Main-text Main-text Main-text Main-text Main-text Main-text Main-text ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". Video Video Video Video Video Video Video Video ."
+    ". . . . . . . . . ."; 
+}
+
+.gameplay-image{
+    position: relative;
+    z-index: 2;
+    height: 90%;
+    grid-area: 2 / 2 / 7 / 10;
+    border: 1px ;
+    
+}
+
+.gameplay-image-inner{
+    border: 4px double var(--color1);
+    justify-self: center;
+
+    background-color: #a24da2;
+    height: 100%;
+    
+    aspect-ratio: 16/9;    
+
+    background-image: url(../img/py-sec2-office-img.png);
+    background-size: cover;
+}
+
+.gameplay-text{
+    position: relative;
+    z-index: 2;
+    grid-area: 7 / 2 / 9 / 10; 
+}
+
+.gameplay-text > p{
+    
+   text-shadow: 0 0 10px rgba(0, 0, 0),
+               0 0 20px rgba(0, 0, 0),
+               0 0 25px rgba(0, 0, 0),
+               0 0 30px rgba(0, 0, 0);
+               font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    justify-self: center;
+    align-self: center;
+    font-family: "Times New Roman", Times, serif;
+    color: var(--color1);
+}
+
+/* MOTIF */
+
+.motif-grid-1{
+    grid-area: 1 / 1 / 10 / 6; 
+    
+
+    position: relative;
+    z-index: 1;
+}
+
+.motif-grid-2{
+    grid-area: 1 / 6 / 10 / 11;
+    
+    transform:  translateX(-10%) translateY(100%); 
+    position: relative;
+    z-index: 1;
+}
+
+.motif-chain{
+    
+
+    height: 300%;
+    width: 10%;
+    background-color: var(--color1);
+    transform: rotate(30deg) translateX(-600%) translateY(-50%);
+
+}
+
+.motif-chain-2{
+    
+
+    height: 300%;
+    width: 10%;
+    background-color: var(--color1);
+    transform: rotate(30deg) translateX(-600%) translateY(-50%);
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .page-text > p{
+    transform: translateY(-0vh);
+    
+}
+
+.Main-topic{
+
+    margin-left: 0%;
+}
+
+.gameplay-image{
+    grid-area: 1 / 2 / 7 / 10;
+}
+
+.gameplay-video-container{
+    grid-area: 5 / 2 / 11 / 10;
+    transform: translateY(-5%);
+}
+
+.video-inner{
+    justify-self: start;
+}
+
+.gameplay-image-inner{
+    justify-self: end;  
+}
+
+.motif-chain{
+    
+
+    height: 200%;
+    width: 10%;
+    background-color: var(--color1);
+    transform: rotate(45deg) translateX(-100%) translateY(-40%);
+
+}
+
+.motif-grid-2{
+    grid-area: 1 / 6 / 10 / 11;
+    
+    transform:  translateX(80%) translateY(50%);
+    position: relative;
+    z-index: 1;
+}
+
+
+}

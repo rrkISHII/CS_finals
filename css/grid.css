@@ -18,14 +18,22 @@
 
 }
 
+.crop{
+    overflow: hidden;
+}
+
 body{
-    background: repeating-linear-gradient(
+
+    margin: 0;
+    background-color: var(--grey1);
+
+    /* background: repeating-linear-gradient(
     45deg,
     var(--grey1),
     var(--grey1) 10px,
     var(--grey2) 10px,
     var(--grey2) 20px
-);
+); */
 }
 
 *{
@@ -42,6 +50,7 @@ body{
     border-radius: 10px;
 
     display: g;
+    box-shadow: 0px 0px 500px 30px var(--black) inset;
 }
 
 .half{
@@ -49,24 +58,13 @@ body{
     width: 50%;
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    z-index: 10;
 
-    height: 6vh;
-    width: 100%;
-    
-    background-color: gray;
-    border: 1px solid black;
-    border-radius: 0px;
-}
 
 /* SECTION 1 */
 
 .grid-hero{
     display: grid;
-    grid-template-rows: 1fr [iconn] 1fr [tittle] 1fr [Enter] 1fr 1fr;
+    grid-template-rows: 1fr [iconn] 1fr [tittle] 1.5fr [Enter] 1fr 1fr;
 }
 
 .game-icon{
@@ -102,7 +100,7 @@ body{
 
     box-shadow: 0px -0px 50px 10px var(--black) inset;
 
-    transform: translateY(-20%);
+    transform: translateY(-10%);
 
     align-content: center;
 }
@@ -112,9 +110,25 @@ body{
     justify-self: center;
 }
 
+.game-title-img{
+    
+    width: 100%;
+    height: 100%;
+    background-size: 25vh;
+    background-image: url(../img/py-title-removebg-preview.png);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-title-img > img{
+    
+}
+
 
 /* warning base */
 .game-enter-base{
+    text-decoration: none;
     position: relative;
     z-index: 1;
     justify-self: center;
@@ -189,18 +203,33 @@ body{
     grid-template-rows: 1fr [r-mid]5fr 1fr;
     
 }
+/* OTHER HALF */
 
-.description{
+.description-base{
+    
     grid-row-start: r-mid;
     grid-column-start: c-mid;
 
-    background-color: var(--purple);
+    background-color: var(--grey1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px -0px 100px 0px var(--black) inset;
+
 
     display: grid;
+    grid-template-rows: 2px 1fr 2px;
     
 }
 
+.description{
+    justify-content: center;
+    align-content: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 .description > p{
+    
 
     grid-row-start: 2;
     padding: 1em;
@@ -209,6 +238,24 @@ body{
     font-family: Georgia, serif;
     font-style: italic;
     color: var(--white);
+}
+
+.description-base{
+
+}
+
+.blur-gradient-white{
+    background-image: linear-gradient(90deg,
+    var(--grey1) 5%,
+    
+    var(--white),
+    
+    var(--grey1) 95%
+    );
+}
+
+.paint-over-description{
+
 }
 
 
@@ -222,14 +269,42 @@ body{
 }
 
 .img1{
-    background-image: url(../img/section1.png);
+    background-image: url(../img/ActionPoint.png);
     background-position: center;
-    background-size: 190%;
+    background-size: 100%;
+    background-size: cover;
 } 
+
+.img2{
+    background-image: url(../img/py-office-img-bg.png);
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+} 
+
+.img3{
+    background-image: url(../img/BACKGROUNDTEST.png);
+    background-position: center;
+    background-size: 150%;
+    background-size: cover;
+} 
+
+.img4{
+    background-image: url(../img/py-limbo-bg.png);
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+
+}
+
 
 /* end of images */
 
 /* MISCALANOUS */
+
+/* .shift{
+    transform: translateY(2vh);
+} */
 
 .tg{
     /* text gradient */
@@ -240,6 +315,7 @@ body{
   /* 2. Clip the background to the text characters */
     background-clip: text;
     -webkit-background-clip: text;
+    font-weight: bold;
 
   /* 3. Make the text transparent to show the gradient beneath */
     color: transparent;
@@ -257,6 +333,8 @@ body{
 
 /* SECTION 2 */
 
+
+
 /* end of section 2 */
 
 @media screen and (max-width: 1024px) {
@@ -269,4 +347,22 @@ body{
     height: 50%;
     width: 100%;
 }
+
+.description > p{
+
+    font-size: 2.0vh;
+
+}
+
+.game-title-img{
+    
+    width: 100%;
+    height: 100%;
+    background-size: 16vh;
+    background-image: url(../img/py-title-removebg-preview.png);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 }

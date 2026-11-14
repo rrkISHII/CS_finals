@@ -1,0 +1,167 @@
+:root{
+
+}
+
+.whole{
+    height: 100%;
+    width: 100%;
+}
+
+.grid-world{
+
+    display: grid;
+    grid-template-columns: 10% 10% 10% 1fr 10%  10% 10%;
+    grid-template-rows: 10% 1fr 10%;
+}
+
+.splice-container{
+
+    grid-area: 2 / 2 / 3 / 7;
+
+    height: 90%;
+    width: 90%;
+    background-color: blueviolet;
+
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+
+.splice1{
+    grid-area: 1 / 1 / 1 / 1;
+    background-color: aqua;
+    border: 1px solid var(--color1);
+
+    background-image: url(../img/shopp.png);
+    background-position: 60%;
+    background-size: cover;
+    
+    
+}
+
+.splice2{
+    grid-area: 1 / 1 / 1 / 1;
+    transform: translateX(100%);
+    background-color: rgb(154, 37, 154);
+    border: 1px solid var(--color1);
+
+    background-image: url(../img/skill.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.splice3{
+    grid-area: 1 / 1 / 1 / 1;
+    transform: translateX(200%);
+    background-color: rgb(37, 154, 62);
+    border: 1px solid var(--color1);
+    background-image: url(../img/merc.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.splice1-text{
+    grid-area: 1 / 1 / 1 / 1;
+    width: 1vw;
+
+}
+
+.splice1-text > p{
+    margin-left: 5px;
+    word-wrap: break-word;
+
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1),
+                0 0 10px rgba(255, 174, 0, 1),
+                0 0 20px rgba(236, 72, 153, 0.6);
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+
+}
+.splice2-text{
+    grid-area: 1 / 2 / 1 / 2;
+    width: 1vw;
+    transform: translateX(0%);
+}
+.splice2-text > p{
+    margin-left: 5px;
+    word-wrap: break-word;
+
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1),
+                0 0 10px rgba(255, 174, 0, 1),
+                0 0 20px rgba(236, 72, 153, 0.6);
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+
+}
+.splice3-text{
+    grid-area: 1 / 3 / 1 / 3;
+    transform: translateX(0%);
+    width: 1vw;
+}
+.splice3-text > p{
+    margin-left: 5px;
+    word-wrap: break-word;
+
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1),
+                0 0 10px rgba(255, 174, 0, 1),
+                0 0 20px rgba(236, 72, 153, 0.6);
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+.page-name-grid2{
+    grid-area: 1 / 1 / 2 / 3;
+    height: 80%;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 1fr 2px;
+}
+.page-text2{
+    position: relative;
+    z-index: 4;
+    align-self: flex-end;
+    height: 80%;
+    transform: translateX(1vw);
+    align-content: end;
+    background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%);
+}
+
+.page-text2 > p{
+    
+    font-family: "Times New Roman", Times, serif;
+    color: var(--color1);
+    
+    font-size: 2vw;
+    transform: translateY(0.5vh);
+    text-shadow: 0px 1px 0px #000000,0px 2px 5px #000000,0px 3px 5px #000000;
+    
+}
+
+.line2{
+    position: relative;
+    z-index: 3;
+    transform: translateX(1vw);
+    background-image: linear-gradient(90deg,var(--color1) 50%, rgba(255, 0, 0, 0) 100%);
+}
+
+@media screen and (max-width: 1024px) {
+.page-name-grid2{
+    grid-area: 1 / 1 / 2 / 3;
+    width: 200%;
+    height: 50%;
+    display: grid;
+    grid-template-rows: 1fr 2px;
+}
+.page-text2 > p{
+    font-family: "Times New Roman", Times, serif;
+    color: var(--color1);
+    
+    font-size: 2vw;
+    transform: translateY(-0.5vh);
+}
+}

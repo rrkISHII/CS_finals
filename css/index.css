@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -17,6 +18,8 @@ html, body {
 }
 
 .section {
+  margin-top: 0;
+  margin-bottom: 0;
   height: 100vh;
   width: 100vw;
   scroll-snap-align: start;
@@ -27,3 +30,6 @@ html, body {
   font-size: 2rem;
   font-family: sans-serif;
 }
+
+
+html, body, .your-scroll-container { overflow-anchor: none; }
