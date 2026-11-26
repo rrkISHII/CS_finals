@@ -69,8 +69,16 @@
       <!-- section 2 - gameplay -->
       <div class="section">
         <div class="crop img2 inner-section">
+
+          <button class="vid-btn vid-btn-left" type="button" aria-label="Previous" id="left-btn"></button>
+          <button class="vid-btn vid-btn-right" type="button" aria-label="Next" id="right-btn"></button>
+
           <!-- USE JS SCRIPT -->
+
+
+
           <div class="half grid-gameplay">
+
             <div class="motif-grid-1">
               <div class="motif-chain"></div>
             </div>
@@ -81,35 +89,40 @@
               <div class="line"></div>
             </div>
 
-            <div class="button-left"></div>
-
-            <div class="Main-topic"><p>START AN OFFICE</p></div>
+            <div class="Main-topic" id="p-main-topic">
+              <p id="destination-title">START AN OFFICE</p>
+            </div>
 
             <div class="gameplay-video-container">
               <div class="video-inner">
-                <video autoplay muted src="img/py-La-office.mp4"></video>
-                <video src=""></video>
-                <video src=""></video>
+                <video loop autoplay muted src="img/py-La-office.mp4" id="vid1"></video>
+                <video loop autoplay muted src="img/comm-vid.mp4" id="vid2" hidden></video>
+                <video loop muted autoplay src="img/Screen Recording 2026-11-23 232222 (1).mp4" id="vid3" hidden ></video>
               </div>
             </div>
+
+            
           </div>
 
           <!-- OTHER HALF -->
           <div class="half grid-gameplay-2">
             <div class="gameplay-image">
-              <div class="gameplay-image-inner"></div>
+              <div class="gameplay-image-inner gameplay-image-img1"></div>
             </div>
 
-            <div class="gameplay-text">
-              <p>and rise the ranks through commissions</p>
+            <div class="gameplay-text" id="">
+              <p id="destination-desc">and rise your ranks through commissions</p>
             </div>
 
             <div class="motif-grid-2">
               <div class="motif-chain-2"></div>
             </div>
 
-            <div class="button-right"></div>
           </div>
+
+          <!-- <div class="overlay-whole">
+              
+            </div> -->
         </div>
       </div>
 
@@ -122,16 +135,30 @@
           <div class="whole grid-world">
             <div class="page-name-grid2">
               <!-- <div class="warning-sign"></div> -->
-              <div class="page-text2"><p>Augment</p></div>
+              <div class="page-text2"><p>Assistance</p></div>
               <div class="line2"></div>
             </div>
             <div class="splice-container">
-              <div class="splice1 default"></div>
-              <div class="splice2 default"></div>
-              <div class="splice3 default"></div>
-              <div class="splice1-text"><p>STORE</p></div>
-              <div class="splice2-text"><p>SKILL</p></div>
-              <div class="splice3-text"><p>MERCS</p></div>
+
+              <div class="splice1 default" id="menu1">
+                <div class="splice1-text"><p>STORE</p></div>
+              </div>
+              <div class="splice2 default" id="menu2">
+                <div class="splice2-text"><p>SKILL</p></div>
+              
+              </div>
+              <div class="splice3 default" id="menu3">
+                <div class="splice3-text"><p>MERCS</p></div>
+
+              </div>
+              
+              
+              <div class="Black-screen">
+                <div class="text-box-cont">
+                    <div class="text-box"><p id="change-text-as">lorem ipsumus</p></div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -140,5 +167,10 @@
       <!-- footer sect -->
       <div class="section"></div>
     </main>
+
+
+    <script src="js/world.js"></script>
+    <script src="js/gameplay.js"></script>
+
   </body>
 </html>
